@@ -19,13 +19,10 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
 
-      // 1. DISABLE AUTOMATIC TRACKING
       fbq('set', 'autoConfig', false, '2980000192209919'); 
-      
       fbq('init', '2980000192209919'); 
       fbq('track', 'PageView');
 
-      // 2. UPDATED LEAD TRACKING
       function trackTelegramLead() {
         fbq('track', 'Lead', {
           content_category: 'Telegram Join',
@@ -34,50 +31,51 @@
       }
     </script>
 
-    <nav class="p-6 text-center">
+    <nav class="pt-8 pb-4 text-center">
         <img src="l1.jpg" alt="Logo" 
-             class="h-[180px] w-[180px] rounded-full object-cover 
-                    border-b-[10px] border-r-[10px] border-blue-400
-                    drop-shadow-[12px_12px_25px_rgba(59,130,246,0.6)] mb-6 mx-auto">
+             class="h-[140px] w-[140px] rounded-full object-cover 
+                    border-4 border-blue-500 shadow-lg mb-4 mx-auto">
+        
+        <span class="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">
+            FREE HACK
+        </span>
     </nav>
 
-    <main class="max-w-xl mx-auto px-6 py-4">
+    <main class="max-w-xl mx-auto px-6">
+        <div class="text-center mb-6">
+            <h1 class="text-3xl md:text-4xl font-black mb-2 tracking-tight leading-tight">
+                100% WORKING FULL RESULT
+            </h1>
+            <h2 class="text-xl md:text-2xl font-bold text-blue-600 mb-4 uppercase">
+                100% LOSS RECOVERY GUARANTEED
+            </h2>
+            <p class="text-gray-600 font-medium text-lg">
+                🎁 Get Free Gift Codes & Daily Hacks
+            </p>
+        </div>
+
         <div class="text-center mb-8">
-            <h1 class="text-4xl font-black mb-4 tracking-tight">Exclusive Daily Updates & Signals</h1>
-            <p class="text-gray-500 text-lg mb-8">Join over 5,000+ members receiving real-time insights directly on Telegram.</p>
+            <p class="text-lg font-bold mb-2 flex items-center justify-center gap-2">
+                CLICK HERE TO JOIN <span class="text-2xl">👇</span>
+            </p>
             
             <a href="https://t.me/+mCiLOA6R2ck1MGU1" 
                onclick="trackTelegramLead()" 
                target="_blank"
-               class="flex items-center justify-center gap-3 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-5 rounded-2xl shadow-xl transition-all transform hover:scale-[1.02] active:scale-95 text-xl">
-                <i data-lucide="send" class="w-6 h-6"></i>
-                Access Telegram Channel
+               class="flex items-center justify-center gap-3 w-full bg-[#24A1DE] hover:bg-[#1e87bb] text-white font-black py-5 rounded-2xl shadow-[0_10px_20px_rgba(36,161,222,0.4)] transition-all transform hover:scale-[1.03] active:scale-95 text-2xl uppercase italic">
+                <i data-lucide="send" class="w-8 h-8"></i>
+                Join Telegram Now
             </a>
         </div>
 
-        <div class="grid grid-cols-1 gap-4 mb-10">
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center">
-                <div class="bg-blue-50 p-2 rounded-lg mr-4">
-                    <i data-lucide="check-circle-2" class="text-blue-500 w-6 h-6"></i>
-                </div>
-                <p class="font-semibold text-gray-700">Real-time alerts and notifications</p>
-            </div>
-            
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center">
-                <div class="bg-blue-50 p-2 rounded-lg mr-4">
-                    <i data-lucide="shield-check" class="text-blue-500 w-6 h-6"></i>
-                </div>
-                <p class="font-semibold text-gray-700">Zero spam, high-quality content only</p>
-            </div>
+        <div class="grid grid-cols-2 gap-3 mb-8">
+            <img src="Hero1.jpg" alt="Proof 1" class="rounded-2xl w-full h-44 object-cover shadow-md border-2 border-white">
+            <img src="Hero2.jpg" alt="Proof 2" class="rounded-2xl w-full h-44 object-cover shadow-md border-2 border-white">
         </div>
 
-        <div class="grid grid-cols-2 gap-3 mb-12">
-            <img src="Hero1.jpg" alt="Feature 1" class="rounded-2xl w-full h-40 object-cover shadow-sm">
-            <img src="Hero2.jpg" alt="Feature 2" class="rounded-2xl w-full h-40 object-cover shadow-sm">
-        </div>
-
-        <div class="text-center py-8 border-t border-gray-200">
-            <div class="text-4xl font-mono font-black text-red-500" id="timer">
+        <div class="text-center py-6 bg-white rounded-3xl shadow-inner border border-gray-100 mb-10">
+            <p class="text-gray-400 text-sm font-bold uppercase mb-1">Offer Expires In:</p>
+            <div class="text-5xl font-mono font-black text-red-600 tracking-tighter" id="timer">
                 14:59
             </div>
         </div>
