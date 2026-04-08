@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Community</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      // 1. DISABLE AUTOMATIC TRACKING
+      fbq('set', 'autoConfig', false, '2980000192209919'); 
+      
+      fbq('init', '2980000192209919'); 
+      fbq('track', 'PageView');
+
+      // 2. UPDATED LEAD TRACKING
+      function trackTelegramLead() {
+        fbq('track', 'Lead', {
+          content_category: 'Telegram Join',
+          content_name: 'ApexAds Community'
+        });
+      }
+    </script>
+
+    <nav class="p-6 text-center">
+        <img src="l1.jpg" alt="Logo" 
+             class="h-[180px] w-[180px] rounded-full object-cover 
+                    border-b-[10px] border-r-[10px] border-blue-400
+                    drop-shadow-[12px_12px_25px_rgba(59,130,246,0.6)] mb-6 mx-auto">
+    </nav>
+
+    <main class="max-w-xl mx-auto px-6 py-4">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-black mb-4 tracking-tight">Exclusive Daily Updates & Signals</h1>
+            <p class="text-gray-500 text-lg mb-8">Join over 5,000+ members receiving real-time insights directly on Telegram.</p>
+            
+            <a href="https://t.me/+mCiLOA6R2ck1MGU1" 
+               onclick="trackTelegramLead()" 
+               target="_blank"
+               class="flex items-center justify-center gap-3 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-5 rounded-2xl shadow-xl transition-all transform hover:scale-[1.02] active:scale-95 text-xl">
+                <i data-lucide="send" class="w-6 h-6"></i>
+                Access Telegram Channel
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 mb-10">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+                <div class="bg-blue-50 p-2 rounded-lg mr-4">
+                    <i data-lucide="check-circle-2" class="text-blue-500 w-6 h-6"></i>
+                </div>
+                <p class="font-semibold text-gray-700">Real-time alerts and notifications</p>
+            </div>
+            
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+                <div class="bg-blue-50 p-2 rounded-lg mr-4">
+                    <i data-lucide="shield-check" class="text-blue-500 w-6 h-6"></i>
+                </div>
+                <p class="font-semibold text-gray-700">Zero spam, high-quality content only</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 mb-12">
+            <img src="Hero1.jpg" alt="Feature 1" class="rounded-2xl w-full h-40 object-cover shadow-sm">
+            <img src="Hero2.jpg" alt="Feature 2" class="rounded-2xl w-full h-40 object-cover shadow-sm">
+        </div>
+
+        <div class="text-center py-8 border-t border-gray-200">
+            <div class="text-4xl font-mono font-black text-red-500" id="timer">
+                14:59
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        let time = 899; 
+        const timerElement = document.getElementById('timer');
+        setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            timerElement.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            if(time > 0) time--;
+        }, 1000);
+    </script>
+
+</body>
+</html>
